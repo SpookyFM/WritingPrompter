@@ -25,10 +25,10 @@ namespace WritingPrompter
             InitializeComponent();
 
             Database DB = new Database();
-            DB.LoadFromFile(Config.DatabaseFullPath);
+            // DB.LoadFromFile(Config.DatabaseFullPath);
             int i = 5;
 
-            /*Category BeginnerCategory = new Category("Beginner");
+            Category BeginnerCategory = new Category("Beginner");
             GrammarPoint Point = new GrammarPoint("Grammar Point");
             Point.Category = BeginnerCategory;
             Sentence ExampleSentence = new Sentence("I love Conny very much");
@@ -36,7 +36,9 @@ namespace WritingPrompter
             DB.Categories.Add(BeginnerCategory);
             DB.GrammarPoints.Add(Point);
 
-            DB.SaveToFile(Config.DatabaseFullPath);*/
+            MySingleEntryEditor.DataContext = Point;
+
+            // DB.SaveToFile(Config.DatabaseFullPath);
 
         }
     }

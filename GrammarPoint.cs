@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,13 +57,13 @@ namespace WritingPrompter
         /// <summary>
         /// Pre-translated examples
         /// </summary>
-        public List<Sentence> Examples
+        public ObservableCollection<Sentence> Examples
         {
             get;
             set;
         }
 
-        public List<Sentence> Sentences
+        public ObservableCollection<Sentence> Sentences
         {
             get;
             set;
@@ -70,8 +71,8 @@ namespace WritingPrompter
 
         public GrammarPoint()
         {
-            Examples = new List<Sentence>();
-            Sentences = new List<Sentence>();
+            Examples = new ObservableCollection<Sentence>();
+            Sentences = new ObservableCollection<Sentence>();
         }
 
         public GrammarPoint(String InName) : this ()

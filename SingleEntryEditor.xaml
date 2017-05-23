@@ -25,22 +25,30 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Label Grid.Row="0" Grid.Column="0">Name:</Label>
-        <TextBox Grid.Row="0" Grid.Column="1" x:Name="NameTextBox">Enter Name here</TextBox>
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="NameTextBox" Text="{Binding Name}"></TextBox>
         <Label Grid.Row="1" Grid.Column="0">Category:</Label>
         <TextBox Grid.Row="1" Grid.Column="1">Enter Category here</TextBox>
         <Label Grid.Row="2" Grid.Column="0">Short Summary:</Label>
-        <TextBox Grid.Row="2" Grid.Column="1">Enter short summary here</TextBox>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ShortSummary}"></TextBox>
         <Label Grid.Row="3" Grid.Column="0">Detailed Summary:</Label>
-        <TextBox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">Enter detailed summary here</TextBox>
+        <TextBox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding DetailedSummary}"></TextBox>
         <Label Grid.Row="5" Grid.Column="0">Formation</Label>
-        <TextBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2">Enter detailed formation here</TextBox>
+        <TextBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding Formation}"></TextBox>
         <Label Grid.Row="7" Grid.Column="0">Examples</Label>
-        <StackPanel Orientation="Vertical" Grid.Row="8" Grid.ColumnSpan="2">
-            <local:SentenceControl />
-        </StackPanel>
+        <ListView Grid.Row="8" Grid.ColumnSpan="2" ItemsSource="{Binding Examples}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:SentenceControl />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         <Label Grid.Row="9" Grid.Column="0">Sentences</Label>
-        <StackPanel Orientation="Vertical" Grid.Row="10" Grid.ColumnSpan="2">
-            <local:SentenceControl />
-        </StackPanel>
+        <ListView Grid.Row="10" Grid.ColumnSpan="2" ItemsSource="{Binding Sentences}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:SentenceControl />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </UserControl>
