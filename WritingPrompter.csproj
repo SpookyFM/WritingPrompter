@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AvailablePointsView.xaml.cs">
+      <DependentUpon>AvailablePointsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Category.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Database.cs" />
@@ -66,6 +69,10 @@
     <Compile Include="SingleEntryEditor.xaml.cs">
       <DependentUpon>SingleEntryEditor.xaml</DependentUpon>
     </Compile>
+    <Page Include="AvailablePointsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

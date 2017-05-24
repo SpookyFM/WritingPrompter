@@ -36,10 +36,24 @@ namespace WritingPrompter
             DB.Categories.Add(BeginnerCategory);
             DB.GrammarPoints.Add(Point);
 
+            GrammarPoint Point2 = new GrammarPoint("Another Grammar Point");
+            DB.GrammarPoints.Add(Point2);
+
             MySingleEntryEditor.DataContext = Point;
+
+            foreach (GrammarPoint CurrentPoint in DB.GrammarPoints)
+            {
+                MyAvailablePointsView.AvailablePoints.Add(CurrentPoint);
+            }
 
             // DB.SaveToFile(Config.DatabaseFullPath);
 
+        }
+
+        private void MyAvailablePointsView_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            GrammarPoint SelectedPoint = MyAvailablePointsView.SelectedPoint;
+            MySingleEntryEditor.DataContext = SelectedPoint;
         }
     }
 }

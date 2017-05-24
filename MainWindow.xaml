@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:WritingPrompter"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <local:SingleEntryEditor x:Name="MySingleEntryEditor" />
-    </Grid>
+    <DockPanel LastChildFill="True">
+        <local:AvailablePointsView DockPanel.Dock="Left" x:Name="MyAvailablePointsView" SelectionChanged="MyAvailablePointsView_SelectionChanged" />
+        <local:SingleEntryEditor DockPanel.Dock="Right" x:Name="MySingleEntryEditor" />
+    </DockPanel>
 </Window>
