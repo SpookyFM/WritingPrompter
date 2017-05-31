@@ -20,12 +20,19 @@ namespace WritingPrompter
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public Database DB
+        {
+            get;
+            set;
+        }
+
         public MainWindow()
         {
             InitializeComponent();
 
-            Database DB = new Database();
-            // DB.LoadFromFile(Config.DatabaseFullPath);
+            DB = new Database();
+            DB.LoadFromFile(Config.DatabaseFullPath);
             int i = 5;
 
             Category BeginnerCategory = new Category("Beginner");
@@ -46,7 +53,6 @@ namespace WritingPrompter
                 MyAvailablePointsView.AvailablePoints.Add(CurrentPoint);
             }
 
-            // DB.SaveToFile(Config.DatabaseFullPath);
 
         }
 
@@ -54,6 +60,11 @@ namespace WritingPrompter
         {
             GrammarPoint SelectedPoint = MyAvailablePointsView.SelectedPoint;
             MySingleEntryEditor.DataContext = SelectedPoint;
+        }
+
+        private void SaveDatabaseButton_Click(object sender, RoutedEventArgs e)
+        {
+            DB.SaveToFile(Config.DatabaseFullPath);
         }
     }
 }

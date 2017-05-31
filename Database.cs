@@ -40,6 +40,10 @@ namespace WritingPrompter
 
         public void LoadFromFile(String FullPath)
         {
+            if (!File.Exists(FullPath))
+            {
+                return;
+            }
             XmlSerializer Serializer = new XmlSerializer(typeof(Database));
             TextReader Reader = new StreamReader(FullPath);
             Database DeserializedDB = Serializer.Deserialize(Reader) as Database;

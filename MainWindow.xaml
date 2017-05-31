@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <DockPanel LastChildFill="True">
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+            <Button x:Name="SaveDatabaseButton" Click="SaveDatabaseButton_Click">Save Database</Button>
+        </StackPanel>
         <local:AvailablePointsView DockPanel.Dock="Left" x:Name="MyAvailablePointsView" SelectionChanged="MyAvailablePointsView_SelectionChanged" />
         <local:SingleEntryEditor DockPanel.Dock="Right" x:Name="MySingleEntryEditor" />
     </DockPanel>
