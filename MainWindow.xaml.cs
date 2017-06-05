@@ -35,7 +35,7 @@ namespace WritingPrompter
             DB.LoadFromFile(Config.DatabaseFullPath);
             int i = 5;
 
-            Category BeginnerCategory = new Category("Beginner");
+            /* Category BeginnerCategory = new Category("Beginner");
             GrammarPoint Point = new GrammarPoint("Grammar Point");
             Point.Category = BeginnerCategory;
             Sentence ExampleSentence = new Sentence("I love Conny very much");
@@ -44,9 +44,9 @@ namespace WritingPrompter
             DB.GrammarPoints.Add(Point);
 
             GrammarPoint Point2 = new GrammarPoint("Another Grammar Point");
-            DB.GrammarPoints.Add(Point2);
+            DB.GrammarPoints.Add(Point2); */
 
-            MySingleEntryEditor.DataContext = Point;
+            //MySingleEntryEditor.DataContext = Point;
 
             foreach (GrammarPoint CurrentPoint in DB.GrammarPoints)
             {

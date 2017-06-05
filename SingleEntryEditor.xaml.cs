@@ -24,5 +24,23 @@ namespace WritingPrompter
         {
             InitializeComponent();
         }
+
+        public GrammarPoint CurrentGrammarPoint
+        {
+            get
+            {
+                return DataContext as GrammarPoint;
+            }
+        }
+
+        private void AddExampleButton_Click(object sender, RoutedEventArgs e)
+        {
+            CurrentGrammarPoint.Examples.Add(new Sentence());
+        }
+
+        private void AddSentenceButton_Click(object sender, RoutedEventArgs e)
+        {
+            CurrentGrammarPoint.Sentences.Add(new Sentence());
+        }
     }
 }

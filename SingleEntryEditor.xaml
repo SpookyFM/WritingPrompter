@@ -35,6 +35,9 @@
         <Label Grid.Row="5" Grid.Column="0">Formation</Label>
         <TextBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding Formation}"></TextBox>
         <Label Grid.Row="7" Grid.Column="0">Examples</Label>
+        <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="1">
+            <Button x:Name="AddExampleButton" Click="AddExampleButton_Click">Add new</Button>
+        </StackPanel>
         <ListView Grid.Row="8" Grid.ColumnSpan="2" ItemsSource="{Binding Examples}">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -43,6 +46,9 @@
             </ListView.ItemTemplate>
         </ListView>
         <Label Grid.Row="9" Grid.Column="0">Sentences</Label>
+        <StackPanel Orientation="Horizontal" Grid.Row="9" Grid.Column="1">
+            <Button x:Name="AddSentenceButton" Click="AddSentenceButton_Click">Add new</Button>
+        </StackPanel>
         <ListView Grid.Row="10" Grid.ColumnSpan="2" ItemsSource="{Binding Sentences}">
             <ListView.ItemTemplate>
                 <DataTemplate>
