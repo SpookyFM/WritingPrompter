@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GrammarPoints>
+    <GrammarPoint>
+      <Name>ことにする</Name>
+      <Category>
+        <Name>Beginner</Name>
+      </Category>
+      <ShortSummary>decide to</ShortSummary>
+      <DetailedSummary>A volitional decision to do s.t. is made.</DetailedSummary>
+      <Formation>Vinf-nonpast ことにする</Formation>
+      <Examples>
+        <Sentence>
+          <Original>私は　会社を　辞める　ことにしました。</Original>
+          <InitialTranslation>I decided to quit my company.</InitialTranslation>
+        </Sentence>
+      </Examples>
+      <Sentences>
+        <Sentence>
+          <Original>私は　会社に　行かないことになりました。</Original>
+          <InitialTranslation>I decided to not go to work.</InitialTranslation>
+        </Sentence>
+      </Sentences>
+    </GrammarPoint>
+    <GrammarPoint>
+      <Name>Another Grammar Point2</Name>
+      <Examples />
+      <Sentences />
+    </GrammarPoint>
+  </GrammarPoints>
+  <Categories>
+    <Category>
+      <Name>Beginner</Name>
+    </Category>
+  </Categories>
+</Database>

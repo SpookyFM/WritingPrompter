@@ -36,6 +36,7 @@ namespace WritingPrompter
             XmlSerializer Serializer = new XmlSerializer(typeof(Database));
             TextWriter Writer = new StreamWriter(FullPath);
             Serializer.Serialize(Writer, this);
+            Writer.Close();
         }
 
         public void LoadFromFile(String FullPath)
