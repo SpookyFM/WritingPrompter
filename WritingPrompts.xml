@@ -23,9 +23,22 @@
       </Sentences>
     </GrammarPoint>
     <GrammarPoint>
-      <Name>Another Grammar Point2</Name>
-      <Examples />
-      <Sentences />
+      <Name>ずつ</Name>
+      <ShortSummary>by; at a time</ShortSummary>
+      <DetailedSummary>a particle that incidates equal distribution of quantity</DetailedSummary>
+      <Formation>Quantifier + ずつ</Formation>
+      <Examples>
+        <Sentence>
+          <Original>私は　漢字を　毎日　五つ　ずつ　覚えます。</Original>
+          <InitialTranslation>I memorize five kanji every day.</InitialTranslation>
+        </Sentence>
+      </Examples>
+      <Sentences>
+        <Sentence>
+          <Original>私は　毎日　文を　三つ　ずつ　書きます。</Original>
+          <InitialTranslation>I write three sentences every day.</InitialTranslation>
+        </Sentence>
+      </Sentences>
     </GrammarPoint>
   </GrammarPoints>
   <Categories>

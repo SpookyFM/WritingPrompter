@@ -31,7 +31,10 @@ namespace WritingPrompter
         {
             get
             {
-                return Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                return Path.Combine(
+                    Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
+                    "../../"
+                );
             }
         }
 
